@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './BS-SEGURAN-A/components/Header';
-import HeroSection from './BS-SEGURAN-A/components/HeroSection';
-import PainPointsSection from './BS-SEGURAN-A/components/PainPointsSection';
-import SolutionSection from './BS-SEGURAN-A/components/SolutionSection';
-import BenefitsSection from './BS-SEGURAN-A/components/BenefitsSection';
-import ServicesSection from './BS-SEGURAN-A/components/ServicesSection';
-import BlogSection from './BS-SEGURAN-A/components/BlogSection';
-import UrgencySection from './BS-SEGURAN-A/components/UrgencySection';
-import FinalCTASection from './BS-SEGURAN-A/components/FinalCTASection';
-import FAQSection from './BS-SEGURAN-A/components/FAQSection';
-import ContactSection from './BS-SEGURAN-A/components/ContactSection';
-import Footer from './BS-SEGURAN-A/components/Footer';
-import WhatsAppButton from './BS-SEGURAN-A/components/WhatsAppButton';
-import BlogPost from './BS-SEGURAN-A/pages/BlogPost';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import PainPointsSection from './components/PainPointsSection';
+import SolutionSection from './components/SolutionSection';
+import BenefitsSection from './components/BenefitsSection';
+import ServicesSection from './components/ServicesSection';
+import BlogSection from './components/BlogSection';
+import UrgencySection from './components/UrgencySection';
+import FinalCTASection from './components/FinalCTASection';
+import FAQSection from './components/FAQSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
+import BlogPost from './pages/BlogPost';
 
 function Home() {
   return (
