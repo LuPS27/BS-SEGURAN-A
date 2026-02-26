@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import PainPointsSection from './components/PainPointsSection';
@@ -14,7 +15,6 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import BlogPost from './pages/BlogPost';
-
 function Home() {
   return (
     <main>
@@ -31,7 +31,6 @@ function Home() {
     </main>
   );
 }
-
 function App() {
   return (
     <Router>
@@ -43,9 +42,9 @@ function App() {
         </Routes>
         <Footer />
         <WhatsAppButton />
+        <SpeedInsights />
       </div>
     </Router>
   );
 }
-
 export default App;
