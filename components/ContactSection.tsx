@@ -36,58 +36,60 @@ const ContactSection = () => {
 
                 <div className="grid lg:grid-cols-2 gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
                     {/* Contact Info */}
-                    <div className="bg-bs-green p-8 lg:p-12 text-white">
+                    <div className="bg-bs-green p-8 lg:p-12 text-white overflow-hidden">
                         <h3 className="text-2xl font-bold mb-8">Informações de Contato</h3>
-
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="bg-white/10 p-3 rounded-lg">
-                                    <Phone size={24} className="text-bs-silver" />
+                                <div className="bg-white/10 p-3 rounded-lg flex-shrink-0">
+                                    <Phone className="w-6 h-6 text-bs-green" />
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <p className="font-bold text-bs-silver">Telefone / WhatsApp</p>
-                                    <a href={`https://api.whatsapp.com/send?phone=${SITE_CONFIG.whatsappNumber}`} className="hover:text-bs-silver transition-colors">
-                                        (31) 99318-6851
+                                    <a
+                                        href={`https://api.whatsapp.com/send?phone=${SITE_CONFIG.whatsappNumber}`}
+                                        className="hover:text-bs-silver transition-colors break-words"
+                                    >
+                                        {SITE_CONFIG.phone}
                                     </a>
                                 </div>
                             </div>
-
                             <div className="flex items-start gap-4">
-                                <div className="bg-white/10 p-3 rounded-lg">
-                                    <Mail size={24} className="text-bs-silver" />
+                                <div className="bg-white/10 p-3 rounded-lg flex-shrink-0">
+                                    <Mail className="w-6 h-6 text-bs-green" />
                                 </div>
-                                <div>
+                                <div className="min-w-0 overflow-hidden">
                                     <p className="font-bold text-bs-silver">E-mail</p>
-                                    <a href="mailto:contato@bsseguranca.com.br" className="hover:text-bs-silver transition-colors break-words">
+                                    <a
+                                        href="mailto:contato@bsseguranca.com.br"
+                                        className="hover:text-bs-silver transition-colors break-all"
+                                    >
                                         contato@bsseguranca.com.br
                                     </a>
                                 </div>
                             </div>
-
                             <div className="flex items-start gap-4">
-                                <div className="bg-white/10 p-3 rounded-lg">
-                                    <MapPin size={24} className="text-bs-silver" />
+                                <div className="bg-white/10 p-3 rounded-lg flex-shrink-0">
+                                    <MapPin className="w-6 h-6 text-bs-green" />
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <p className="font-bold text-bs-silver">Localização</p>
                                     <p>Pará de Minas - MG</p>
                                 </div>
                             </div>
                         </div>
-
-                        <div className="mt-12">
-                            <h4 className="font-bold text-bs-silver mb-4">Nossa Missão</h4>
-                            <p className="text-sm opacity-80 italic">
-                                "Garantir a segurança jurídica e operacional de nossos clientes através de uma gestão técnica de excelência."
+                        <div className="mt-10 p-6 bg-white/10 rounded-xl">
+                            <h4 className="font-bold text-lg mb-2">Nossa Missão</h4>
+                            <p className="text-sm italic break-words">
+                                &ldquo;Garantir a segurança jurídica e operacional de nossos clientes através de uma gestão técnica de excelência.&rdquo;
                             </p>
                         </div>
                     </div>
 
                     {/* Contact Form */}
                     <div className="p-8 lg:p-12">
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1">Nome Completo</label>
+                                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Nome Completo</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -99,55 +101,50 @@ const ContactSection = () => {
                                     placeholder="Seu nome"
                                 />
                             </div>
-
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-1">E-mail</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-bs-green focus:ring-1 focus:ring-bs-green transition-all"
-                                        placeholder="exemplo@email.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1">WhatsApp / Telefone</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-bs-green focus:ring-1 focus:ring-bs-green transition-all"
-                                        placeholder="(31) 99999-9999"
-                                    />
-                                </div>
-                            </div>
-
                             <div>
-                                <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-1">Como podemos ajudar?</label>
+                                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">E-mail</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-bs-green focus:ring-1 focus:ring-bs-green transition-all"
+                                    placeholder="exemplo@email.com"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">WhatsApp / Telefone</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-bs-green focus:ring-1 focus:ring-bs-green transition-all"
+                                    placeholder="(31) 99999-9999"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Como podemos ajudar?</label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
-                                    rows={4}
+                                    rows={5}
                                     className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-bs-green focus:ring-1 focus:ring-bs-green transition-all resize-none"
                                     placeholder="Descreva brevemente sua necessidade..."
-                                ></textarea>
+                                />
                             </div>
-
                             <button
                                 type="submit"
-                                className="w-full bg-bs-red text-white font-bold py-4 rounded-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2 transform hover:scale-[1.02]"
+                                className="w-full bg-bs-red text-white font-bold py-4 rounded-lg hover:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2"
                             >
-                                <Send size={20} />
+                                <Send className="w-5 h-5" />
                                 Enviar Mensagem
                             </button>
                         </form>
