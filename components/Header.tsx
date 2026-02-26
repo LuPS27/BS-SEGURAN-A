@@ -29,7 +29,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <div className="h-16 w-16 md:h-20 md:w-20 mr-3 rounded-full overflow-hidden flex items-center justify-center">
+          <div className="h-12 w-12 md:h-20 md:w-20 mr-3 rounded-full overflow-hidden flex items-center justify-center">
             <img src="https://iili.io/qKZ0vJn.png" alt="BS Segurança Logo" className="h-full w-full object-cover scale-125" />
           </div>
         </Link>

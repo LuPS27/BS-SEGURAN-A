@@ -58,7 +58,7 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-bs-silver">E-mail</p>
-                                    <a href="mailto:contato@bsseguranca.com.br" className="hover:text-bs-silver transition-colors">
+                                    <a href="mailto:contato@bsseguranca.com.br" className="hover:text-bs-silver transition-colors break-words">
                                         contato@bsseguranca.com.br
                                     </a>
                                 </div>
