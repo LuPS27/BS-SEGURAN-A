@@ -34,7 +34,7 @@ function Home() {
 function App() {
   return (
     <Router>
-      <div className="bg-slate-100 text-gray-800 font-sans">
+      <div className="bg-slate-100 text-gray-800 font-sans overflow-x-hidden">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
